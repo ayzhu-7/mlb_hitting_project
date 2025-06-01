@@ -3,8 +3,8 @@
 Just need to install all necessary packages, then run all cells of the Baseball_Stat_Investigation.ipynb notebook, and the last cell should output all hitters who qualify based on barrel percent.
 
 Definitions:
-Barrel = a batted ball in play which has high exit velo and good launch angle. As the ball is hit harder, the range of acceptable launch angles increases.
-Blast = batted ball which is squared up and has high swing speed. squared up means that you convert the pitch speed + swing speed into exit velo efficiently.
+- Barrel = a batted ball in play which has high exit velo and good launch angle. As the ball is hit harder, the range of acceptable launch angles increases.
+- Blast = batted ball which is squared up and has high swing speed. squared up means that you convert the pitch speed + swing speed into exit velo efficiently.
 
 The way we calculate is as following:
 1. Take all starting pitchers and calculate their barrel percentage over the last month against each side of the plate.
