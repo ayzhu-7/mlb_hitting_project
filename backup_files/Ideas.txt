@@ -1,0 +1,11 @@
+We want to predict the odds of a baseball player getting a home run in a specific game.
+Some potential factors include:
+- The opposing starting pitcher
+- The opposing bullpen
+- Recent results (maybe a rolling xBA or a rolling HR percentage or even bat speed)
+
+
+How do we see how well we would perform against a specific pitcher?
+- Success against a specific pitch and then percentages of pitches of that type
+- Recent exit velos vs the most common pitches from that pitcher to that handed batter
+- 
