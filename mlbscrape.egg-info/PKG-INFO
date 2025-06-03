@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: mlbscrape
+Version: 1.0.1
+Summary: Python package for mining MLB data
+Home-page: https://github.com/fultoncjb/mlb-scraper
+Requires-Dist: bidict
+Requires-Dist: bs4
+Requires-Dist: lxml
+Requires-Dist: requests
+Requires-Dist: selenium
+Requires-Dist: pyyaml
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary

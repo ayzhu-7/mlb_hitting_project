@@ -1,0 +1,6 @@
+bidict
+bs4
+lxml
+requests
+selenium
+pyyaml

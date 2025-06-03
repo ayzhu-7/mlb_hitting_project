@@ -1,0 +1,7 @@
+baseball_reference
+beautiful_soup_helper
+draft_kings
+fan_graphs
+rotowire
+stat_miner
+team_dict

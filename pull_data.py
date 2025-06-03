@@ -4,6 +4,8 @@ import os
 from pybaseball import statcast, pitching_stats, batting_stats, playerid_lookup, statcast_batter, statcast_pitcher
 import statsapi
 from datetime import date
+import requests
+from bs4 import BeautifulSoup
 
 # kershaw_id = playerid_lookup('kershaw', 'clayton')
 # kershaw_stats = statcast_pitcher('2017-06-01', '2017-07-01', kershaw_id['key_mlbam'][0])
@@ -15,6 +17,19 @@ def squared_up(launch_velocity, bat_speed, pitch_speed):
     pitch_speed_home = 0.92 * pitch_speed
     max_theo = 1.23 * bat_speed + 0.23 * pitch_speed_home
     return launch_velocity / max_theo if max_theo > 0 else 0
+
+def get_team_mapping():
+    standings = statsapi.standings_data()
+    team_mapping = {}
+    for k in standings:
+        for team in standings[k]['teams']:
+            name = team['name']
+            split_name = name.split(' ')
+            if name in ['Chicago White Sox','Boston Red Sox','Toronto Blue Jays']:
+                team_mapping[' '.join(split_name[-2:])] = team['team_id']
+            else:
+                team_mapping[split_name[-1]] = team['team_id']
+    return team_mapping
 
 
 def get_blast(launch_velocity, bat_speed, pitch_speed):
@@ -287,4 +302,52 @@ def get_opposing_lineup(game_id, opponent):
         print(f"Error fetching lineup for game {game_id}: {e}")
         return None
 
+def get_team(game_id, team):
+    game_data = statsapi.boxscore_data(game_id)
+    if team == 'home':
+        return game_data['teamInfo']['home']['teamName']
+    else:
+        return game_data['teamInfo']['away']['teamName']
 
+def get_start_time(game_id):
+    game_data = statsapi.boxscore_data(game_id)
+    return game_data['gameBoxInfo'][-3]['value']
+
+def get_rotowire_lineups():
+    url = "https://www.rotowire.com/baseball/daily-lineups.php"
+    soup = BeautifulSoup(requests.get(url).content, "html.parser")
+
+    data_pitching = []
+    data_batter = []
+    team_type = ''
+
+    for e in soup.select('.lineup__box ul li'):
+        if team_type != e.parent.get('class')[-1]:
+            order_count = 1
+            team_type = e.parent.get('class')[-1]
+
+        if e.get('class') and 'lineup__player-highlight' in e.get('class'):
+            data_pitching.append({
+                'date': e.find_previous('main').get('data-gamedate'),
+                'game_time': e.find_previous('div', attrs={'class':'lineup__time'}).get_text(strip=True),
+                'pitcher_name':e.a.get_text(strip=True),
+                'team':e.find_previous('div', attrs={'class':team_type}).next.strip(),
+                'lineup_throws':e.span.get_text(strip=True)
+            })
+        elif e.get('class') and 'lineup__player' in e.get('class'):
+            data_batter.append({
+                'date': e.find_previous('main').get('data-gamedate'),
+                'game_time': e.find_previous('div', attrs={'class':'lineup__time'}).get_text(strip=True),
+                'pitcher_name':e.a.get_text(strip=True),
+                'team':e.find_previous('div', attrs={'class':team_type}).next.strip(),
+                'pos': e.div.get_text(strip=True),
+                'batting_order':order_count,
+                'lineup_bats':e.span.get_text(strip=True)
+            })
+            order_count+=1
+
+    df_pitching = pd.DataFrame(data_pitching)
+    df_batter = pd.DataFrame(data_batter)
+
+    return df_pitching, df_batter
+    

@@ -50,7 +50,7 @@ def url_to_soup(url):
     :param url: the absolute URL string
     :return the BeautifulSoup object returned, return None if the object was not successfully created
     """
-    response = requests.get(url, timeout=(10, 10))
+    response = requests.get(url)
 
     if response.status_code == 404:
         print("Attempt to access invalid URL: " + response.url)
