@@ -6,6 +6,7 @@ import statsapi
 from datetime import date
 import requests
 from bs4 import BeautifulSoup
+import unicodedata
 
 # kershaw_id = playerid_lookup('kershaw', 'clayton')
 # kershaw_stats = statcast_pitcher('2017-06-01', '2017-07-01', kershaw_id['key_mlbam'][0])
@@ -351,3 +352,63 @@ def get_rotowire_lineups():
 
     return df_pitching, df_batter
     
+
+def get_specific_lineup(team, player_lineup):
+    specific_lineup = player_lineup[player_lineup['team'] == team].copy()
+    players = specific_lineup['pitcher_name'].tolist()
+    return players
+
+
+def remove_accents(input_str):
+    normalized = unicodedata.normalize('NFKD', input_str)
+    return ''.join(c for c in normalized if not unicodedata.combining(c))
+
+
+def map_player_ids(team_ids):
+    player_names = []
+    player_ids = []
+    team_names = []
+    for team_id in team_ids:
+        roster = statsapi.roster(team_id)
+        team = statsapi.lookup_team(team_id)
+        roster_player_names = [player.split()[2:] for player in roster.split('\n')]
+        for name in roster_player_names:
+            if len(name) >= 1:
+                if len(name) > 2:
+                    if name[2] == 'Jr.' or name[2] == 'Sr.' or name[2] == 'II' or name[2] == 'III' or name[2] == 'IV':
+                        name[1] = ' '.join(name[1:-1])
+                    elif name[1] == 'A.':
+                        name[1] = ' '.join(name[2:])
+                    else:
+                        name[1] = ' '.join(name[1:])
+                    print(name[0] + ' ' + name[1])
+                player_id = playerid_lookup(name[1], name[0], fuzzy=True)['key_mlbam'].iloc[0]
+                player_names.append(name[0] + ' ' + name[1])
+                player_ids.append(player_id)
+                team_names.append(team[0]['teamName'])
+
+    player_id_mapping = pd.DataFrame({'name': player_names, 'team': team_names, 'player_id': player_ids})
+    player_id_mapping['abbrev'] = player_id_mapping['name'].apply(lambda x: x.split(' ')[0][0] + '. ' + ' '.join(x.split(' ')[1:]))
+    player_id_mapping['clean_name'] = player_id_mapping['name'].apply(remove_accents)
+    player_id_mapping['clean_abbrev'] = player_id_mapping['clean_name'].apply(lambda x: x.split(' ')[0][0] + '. ' + ' '.join(x.split(' ')[1:]))
+    player_id_mapping = player_id_mapping[['name','abbrev','clean_name','clean_abbrev','team','player_id']]
+    player_id_mapping.to_csv('player_id_mapping.csv', index=False)
+    return player_id_mapping
+    
+
+
+def get_player_ids(player_names, player_map_df, team_name):
+    filtered_df = player_map_df[player_map_df['team'] == team_name]
+    player_ids = []
+    for name in player_names:
+        new_df = filtered_df[filtered_df['name'] == name]['player_id'].values
+        if len(new_df) == 0:
+            new_df = filtered_df[filtered_df['abbrev'] == name]['player_id'].values
+        if len(new_df) == 0:
+            new_df = filtered_df[filtered_df['clean_name'] == name]['player_id'].values
+        if len(new_df) == 0:
+            new_df = filtered_df[filtered_df['clean_abbrev'] == name]['player_id'].values
+        if len(new_df) == 0:
+            raise ValueError(f"Player {name} not found in player_id_mapping.csv")
+        player_ids.append(new_df[0])
+    return player_ids
