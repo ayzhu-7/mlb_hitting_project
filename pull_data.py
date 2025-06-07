@@ -185,7 +185,7 @@ def get_barrel_percentage(player_id, start_date, end_date):
     player_barrels = statcast_pitcher(start_dt=start_date, end_dt=end_date,player_id=player_id)
 
     if player_barrels.empty:
-        return 0
+        return {'left_pct': 0, 'right_pct': 0, 'total_pct': 0}
     # print(player_barrels['player_name'].iloc[0])
     player_bbe = player_barrels[(player_barrels['description'].isin(['hit_into_play']))].copy()
     player_bbe = code_barrel(player_bbe)
@@ -206,7 +206,14 @@ def get_barrel_percentage(player_id, start_date, end_date):
     # return [total_barrels, total_bbes, total_barrels / total_bbes if total_bbes > 0 else 0]
     return barrel_dict
 
+def spray_angle(hc_x, hc_y, stand):
+    mult = 1
+    if stand == 'L':
+        mult = -1
+    return mult * np.degrees(np.arctan2((hc_x - 125.42), (198.27 - hc_y)))
+
 def hitter_barrel_percentage(player_id, start_date, end_date, pitch_mix, sides):
+    mapping = {'single': 1, 'double': 2, 'triple': 3, 'home_run': 4}
     player_barrels = statcast_batter(start_dt=start_date, end_dt=end_date,player_id=player_id)
     barrel_dict = {}
 
@@ -214,16 +221,24 @@ def hitter_barrel_percentage(player_id, start_date, end_date, pitch_mix, sides):
         if player_barrels.empty:
             temp_barrel_dict = {'total_barrels': 0, 'total_bbes': 0, 'barrel_pct': 0}
         else:
+            player_abs = player_barrels[(player_barrels['events'].notna()) & (player_barrels['stand'] == side)].copy()
+            player_abs = player_abs[~player_abs['events'].isin(['walk','hit_by_pitch','field_error','sac_fly','sac_bunt'])]
+            player_abs['bases'] = player_abs['events'].map(lambda x: mapping.get(x, 0))
+            player_hits = len(player_abs[player_abs['bases'] != 0]  )
             player_bbe = player_barrels[(player_barrels['description'].isin(['hit_into_play'])) & (player_barrels['stand'] == side)].copy()
             player_bbe = code_barrel(player_bbe)
             player_bbe['is_blast'] = player_bbe.apply(lambda row: get_blast(row['launch_speed'], row['bat_speed'],row['release_speed']), axis=1)
+            player_bbe['pulled_air'] = player_bbe.apply(lambda row: 1 if (spray_angle(row['hc_x'], row['hc_y'], row['stand']) < -15 and row['launch_angle'] >= 10) else 0, axis=1)
             # player_bbe = player_bbe[player_bbe['pitch_name'].isin(pitch_mix[side].keys())]
             total_barrels = player_bbe['is_barrel'].sum()
             total_bbes = player_bbe.shape[0]
+            total_abs = player_abs.shape[0]
             temp_barrel_dict = {'total_barrels': total_barrels,
                         'total_bbes': total_bbes,
                         'barrel_pct': total_barrels / total_bbes if total_bbes > 0 else 0,
-                        'blast_pct': player_bbe['is_blast'].sum() / total_bbes if total_bbes > 0 else 0}
+                        'blast_pct': player_bbe['is_blast'].sum() / total_bbes if total_bbes > 0 else 0,
+                        'pulled_pct': player_bbe['pulled_air'].sum() / total_bbes if total_bbes > 0 else 0,
+                        'iso': (player_abs['bases'].sum() - player_hits)/ total_abs if total_abs > 0 else 0}
         barrel_dict[side] = temp_barrel_dict
     return barrel_dict
 
@@ -231,7 +246,7 @@ def get_barrel_pcts(barrel_dict):
     barrel_pcts = []
     for side in barrel_dict:
         if barrel_dict[side]['total_bbes'] > 0:
-            barrel_pcts.append([barrel_dict[side]['barrel_pct'], barrel_dict[side]['blast_pct']])
+            barrel_pcts.append([barrel_dict[side]['barrel_pct'], barrel_dict[side]['blast_pct'], barrel_dict[side]['pulled_pct'], barrel_dict[side]['iso']])
     return barrel_pcts
 
 def check_barrel_pcts(barrel_pcts):
@@ -246,14 +261,14 @@ def check_barrel_pcts(barrel_pcts):
     """
     # print(type(barrel_pcts))
     if len(barrel_pcts) == 0:
-        return [0, 0]
+        return [0, 0, 0,0]
     elif len(barrel_pcts) == 1:
         if barrel_pcts[0][0] > 0.1:
             return barrel_pcts[0]
         else:
-            return [0, 0]
+            return [0, 0, 0,0]
     if barrel_pcts[0][0] < 0.1 and barrel_pcts[1][0] < 0.1:
-        return [0, 0]
+        return [0, 0, 0,0]
     elif barrel_pcts[0][0] > barrel_pcts[1][0]:
         return barrel_pcts[0]
     else:
@@ -365,6 +380,19 @@ def remove_accents(input_str):
 
 
 def map_player_ids(team_ids):
+    """
+    Maps player names to MLB player IDs.
+    
+    Parameters
+    ----------
+    team_ids : list
+        List of team IDs to map.
+    
+    Returns
+    -------
+    player_id_mapping : pandas.DataFrame
+        DataFrame containing player name, team name, player ID, abbreviated name, clean name, and clean abbreviated name.
+    """
     player_names = []
     player_ids = []
     team_names = []
@@ -412,3 +440,40 @@ def get_player_ids(player_names, player_map_df, team_name):
             raise ValueError(f"Player {name} not found in player_id_mapping.csv")
         player_ids.append(new_df[0])
     return player_ids
+
+
+def get_hitter_outcomes(player_id, start_date, end_date):
+    mapping = {'single': 1, 'double': 2, 'triple': 3, 'home_run': 4}
+    player_outcomes = statcast_batter(start_dt=start_date, end_dt=end_date,player_id=player_id)
+    player_outcomes = player_outcomes[player_outcomes['events'].notna()]
+    player_outcomes['bases'] = player_outcomes['events'].map(lambda x: mapping.get(x, 0))
+    if len(player_outcomes):
+        print(player_outcomes['player_name'].iloc[0])
+    return player_outcomes['bases'].sum()
+
+def get_single_hitter_history(player_id, start_date, end_date):
+    mapping = {'single': 1, 'double': 2, 'triple': 3, 'home_run': 4}
+    hitting_history = statcast_batter(start_dt=start_date, end_dt=end_date,player_id=player_id)
+    hitting_history = hitting_history[hitting_history['events'].notna()]
+    hitting_history['bases'] = hitting_history['events'].map(lambda x: mapping.get(x, 0))
+    game_history = hitting_history.groupby('game_date')['bases'].sum().reset_index()
+    game_history = game_history.rename(columns={'game_date': 'date', 'bases': player_id})
+    game_history['date'] = pd.to_datetime(game_history['date'])
+    return game_history
+
+def get_all_hitter_history(player_ids, start_date, end_date):
+    all_outcome = pd.DataFrame()
+    dates = pd.date_range(start_date, end_date)
+    all_outcome['date'] = dates
+    for player_id in player_ids:
+        game_history = get_single_hitter_history(player_id, start_date, end_date)
+        all_outcome = pd.merge(all_outcome, game_history, on='date', how='left')
+    return all_outcome
+
+def update_hitter_history(player_hitting_history, start_date, end_date):
+    player_ids = player_hitting_history.columns.tolist()[1:]
+    for player_id in player_ids:
+        new_data = get_single_hitter_history(player_id, start_date, end_date)
+        player_hitting_history = pd.merge(player_hitting_history, new_data, on='date', how='left')
+        player_hitting_history[player_id] = player_hitting_history[player_id].fillna(0)
+    return player_hitting_history
