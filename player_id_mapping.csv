@@ -2,6 +2,7 @@ name,abbrev,clean_name,clean_abbrev,team,player_id
 Alec Burleson,A. Burleson,Alec Burleson,A. Burleson,Cardinals,676475
 Andre Pallante,A. Pallante,Andre Pallante,A. Pallante,Cardinals,669467
 Brendan Donovan,B. Donovan,Brendan Donovan,B. Donovan,Cardinals,680977
+Chris Roycroft,C. Roycroft,Chris Roycroft,C. Roycroft,Cardinals,688297
 Erick Fedde,E. Fedde,Erick Fedde,E. Fedde,Cardinals,607200
 Iván Herrera,I. Herrera,Ivan Herrera,I. Herrera,Cardinals,671056
 JoJo Romero,J. Romero,JoJo Romero,J. Romero,Cardinals,668941
@@ -10,14 +11,13 @@ Jose Barrero,J. Barrero,Jose Barrero,J. Barrero,Cardinals,676480
 Kyle Leahy,K. Leahy,Kyle Leahy,K. Leahy,Cardinals,681517
 Lars Nootbaar,L. Nootbaar,Lars Nootbaar,L. Nootbaar,Cardinals,663457
 Masyn Winn,M. Winn,Masyn Winn,M. Winn,Cardinals,691026
-Matt Svanson,M. Svanson,Matt Svanson,M. Svanson,Cardinals,694335
 Matthew Liberatore,M. Liberatore,Matthew Liberatore,M. Liberatore,Cardinals,669461
 Miles Mikolas,M. Mikolas,Miles Mikolas,M. Mikolas,Cardinals,571945
 Nolan Arenado,N. Arenado,Nolan Arenado,N. Arenado,Cardinals,571448
 Nolan Gorman,N. Gorman,Nolan Gorman,N. Gorman,Cardinals,669357
 Pedro Pagés,P. Pagés,Pedro Pages,P. Pages,Cardinals,817887
 Phil Maton,P. Maton,Phil Maton,P. Maton,Cardinals,664208
-Roddery Muñoz,R. Muñoz,Roddery Munoz,R. Munoz,Cardinals,682610
+Riley O'Brien,R. O'Brien,Riley O'Brien,R. O'Brien,Cardinals,676617
 Ryan Helsley,R. Helsley,Ryan Helsley,R. Helsley,Cardinals,664854
 Ryan Vilade,R. Vilade,Ryan Vilade,R. Vilade,Cardinals,668723
 Sonny Gray,S. Gray,Sonny Gray,S. Gray,Cardinals,543243
@@ -61,7 +61,6 @@ Chase Meidroth,C. Meidroth,Chase Meidroth,C. Meidroth,White Sox,805367
 Dan Altavilla,D. Altavilla,Dan Altavilla,D. Altavilla,White Sox,656186
 Davis Martin,D. Martin,Davis Martin,D. Martin,White Sox,663436
 Edgar Quero,E. Quero,Edgar Quero,E. Quero,White Sox,700337
-Jared Shuster,J. Shuster,Jared Shuster,J. Shuster,White Sox,694363
 Jordan Leasure,J. Leasure,Jordan Leasure,J. Leasure,White Sox,673929
 Josh Rojas,J. Rojas,Josh Rojas,J. Rojas,White Sox,668942
 Joshua Palacios,J. Palacios,Joshua Palacios,J. Palacios,White Sox,641943
@@ -76,6 +75,7 @@ Sean Burke,S. Burke,Sean Burke,S. Burke,White Sox,680732
 Shane Smith,S. Smith,Shane Smith,S. Smith,White Sox,681343
 Steven Wilson,S. Wilson,Steven Wilson,S. Wilson,White Sox,621051
 Tim Elko,T. Elko,Tim Elko,T. Elko,White Sox,671284
+Tyler Alexander,T. Alexander,Tyler Alexander,T. Alexander,White Sox,641302
 Vinny Capra,V. Capra,Vinny Capra,V. Capra,White Sox,681962
 Adley Rutschman,A. Rutschman,Adley Rutschman,A. Rutschman,Orioles,668939
 Andrew Kittredge,A. Kittredge,Andrew Kittredge,A. Kittredge,Orioles,552640
@@ -94,11 +94,11 @@ Heston Kjerstad,H. Kjerstad,Heston Kjerstad,H. Kjerstad,Orioles,677008
 Jackson Holliday,J. Holliday,Jackson Holliday,J. Holliday,Orioles,702616
 Jorge Mateo,J. Mateo,Jorge Mateo,J. Mateo,Orioles,622761
 Keegan Akin,K. Akin,Keegan Akin,K. Akin,Orioles,669211
-Matt Bowman,M. Bowman,Matt Bowman,M. Bowman,Orioles,621199
 Maverick Handley,M. Handley,Maverick Handley,M. Handley,Orioles,668974
 Ramón Laureano,R. Laureano,Ramon Laureano,R. Laureano,Orioles,657656
 Ramón Urías,R. Urías,Ramon Urias,R. Urias,Orioles,602104
 Ryan O'Hearn,R. O'Hearn,Ryan O'Hearn,R. O'Hearn,Orioles,656811
+Scott Blewett,S. Blewett,Scott Blewett,S. Blewett,Orioles,656240
 Seranthony Domínguez,S. Domínguez,Seranthony Dominguez,S. Dominguez,Orioles,622554
 Tomoyuki Sugano,T. Sugano,Tomoyuki Sugano,T. Sugano,Orioles,608372
 Yennier Cano,Y. Cano,Yennier Cano,Y. Cano,Orioles,666974
@@ -107,10 +107,10 @@ Abraham Toro,A. Toro,Abraham Toro,A. Toro,Red Sox,647351
 Aroldis Chapman,A. Chapman,Aroldis Chapman,A. Chapman,Red Sox,547973
 Brayan Bello,B. Bello,Brayan Bello,B. Bello,Red Sox,678394
 Brennan Bernardino,B. Bernardino,Brennan Bernardino,B. Bernardino,Red Sox,657514
+Brian Van Belle,B. Van Belle,Brian Van Belle,B. Van Belle,Red Sox,425226
 Carlos Narváez,C. Narváez,Carlos Narvaez,C. Narvaez,Red Sox,665966
 Ceddanne Rafaela,C. Rafaela,Ceddanne Rafaela,C. Rafaela,Red Sox,678882
 Connor Wong,C. Wong,Connor Wong,C. Wong,Red Sox,657136
-Cooper Criswell,C. Criswell,Cooper Criswell,C. Criswell,Red Sox,681867
 David Hamilton,D. Hamilton,David Hamilton,D. Hamilton,Red Sox,666152
 Garrett Crochet,G. Crochet,Garrett Crochet,G. Crochet,Red Sox,676979
 Garrett Whitlock,G. Whitlock,Garrett Whitlock,G. Whitlock,Red Sox,676477
@@ -124,17 +124,16 @@ Luis Guerrero,L. Guerrero,Luis Guerrero,L. Guerrero,Red Sox,692285
 Marcelo Mayer,M. Mayer,Marcelo Mayer,M. Mayer,Red Sox,691785
 Rafael Devers,R. Devers,Rafael Devers,R. Devers,Red Sox,646240
 Rob Refsnyder,R. Refsnyder,Rob Refsnyder,R. Refsnyder,Red Sox,608701
+Roman Anthony,R. Anthony,Roman Anthony,R. Anthony,Red Sox,121697
 Romy Gonzalez,R. Gonzalez,Romy Gonzalez,R. Gonzalez,Red Sox,663853
 Trevor Story,T. Story,Trevor Story,T. Story,Red Sox,596115
 Walker Buehler,W. Buehler,Walker Buehler,W. Buehler,Red Sox,621111
-Wilyer Abreu,W. Abreu,Wilyer Abreu,W. Abreu,Red Sox,677800
 Zack Kelly,Z. Kelly,Zack Kelly,Z. Kelly,Red Sox,677161
 Aaron Bummer,A. Bummer,Aaron Bummer,A. Bummer,Braves,607481
 Alex Verdugo,A. Verdugo,Alex Verdugo,A. Verdugo,Braves,657077
 Austin Riley,A. Riley,Austin Riley,A. Riley,Braves,663586
 Bryce Elder,B. Elder,Bryce Elder,B. Elder,Braves,693821
 Chris Sale,C. Sale,Chris Sale,C. Sale,Braves,519242
-Craig Kimbrel,C. Kimbrel,Craig Kimbrel,C. Kimbrel,Braves,518886
 Drake Baldwin,D. Baldwin,Drake Baldwin,D. Baldwin,Braves,686948
 Dylan Dodd,D. Dodd,Dylan Dodd,D. Dodd,Braves,689266
 Dylan Lee,D. Lee,Dylan Lee,D. Lee,Braves,669276
@@ -142,6 +141,7 @@ Eli White,E. White,Eli White,E. White,Braves,642201
 Enyel De Los Santos,E. De Los Santos,Enyel De Los Santos,E. De Los Santos,Braves,660853
 Grant Holmes,G. Holmes,Grant Holmes,G. Holmes,Braves,656550
 José Azocar,J. Azocar,Jose Azocar,J. Azocar,Braves,640492
+José Ruiz,J. Ruiz,Jose Ruiz,J. Ruiz,Braves,614179
 Luke Williams,L. Williams,Luke Williams,L. Williams,Braves,663897
 Marcell Ozuna,M. Ozuna,Marcell Ozuna,M. Ozuna,Braves,542303
 Matt Olson,M. Olson,Matt Olson,M. Olson,Braves,621566
@@ -181,10 +181,8 @@ Rob Zastryzny,R. Zastryzny,Rob Zastryzny,R. Zastryzny,Brewers,642239
 Sal Frelick,S. Frelick,Sal Frelick,S. Frelick,Brewers,686217
 Trevor Megill,T. Megill,Trevor Megill,T. Megill,Brewers,656730
 William Contreras,W. Contreras,William Contreras,W. Contreras,Brewers,661388
-Alan Rangel,A. Rangel,Alan Rangel,A. Rangel,Phillies,122856
 Alec Bohm,A. Bohm,Alec Bohm,A. Bohm,Phillies,664761
 Brandon Marsh,B. Marsh,Brandon Marsh,B. Marsh,Phillies,669016
-Bryce Harper,B. Harper,Bryce Harper,B. Harper,Phillies,547180
 Bryson Stott,B. Stott,Bryson Stott,B. Stott,Phillies,681082
 Carlos Hernández,C. Hernández,Carlos Hernandez,C. Hernandez,Phillies,672578
 Cristopher Sánchez,C. Sánchez,Cristopher Sanchez,C. Sanchez,Phillies,650911
@@ -201,12 +199,14 @@ Max Lazar,M. Lazar,Max Lazar,M. Lazar,Phillies,676661
 Mick Abel,M. Abel,Mick Abel,M. Abel,Phillies,690953
 Nick Castellanos,N. Castellanos,Nick Castellanos,N. Castellanos,Phillies,592206
 Orion Kerkering,O. Kerkering,Orion Kerkering,O. Kerkering,Phillies,689147
+Otto Kemp,O. Kemp,Otto Kemp,O. Kemp,Phillies,643393
 Rafael Marchán,R. Marchán,Rafael Marchan,R. Marchan,Phillies,665561
 Ranger Suárez,R. Suárez,Ranger Suarez,R. Suarez,Phillies,624133
 Taijuan Walker,T. Walker,Taijuan Walker,T. Walker,Phillies,592836
 Tanner Banks,T. Banks,Tanner Banks,T. Banks,Phillies,621383
 Trea Turner,T. Turner,Trea Turner,T. Turner,Phillies,607208
 Weston Wilson,W. Wilson,Weston Wilson,W. Wilson,Phillies,642215
+Zack Wheeler,Z. Wheeler,Zack Wheeler,Z. Wheeler,Phillies,554430
 Brent Rooker,B. Rooker,Brent Rooker,B. Rooker,Athletics,667670
 Denzel Clarke,D. Clarke,Denzel Clarke,D. Clarke,Athletics,672016
 Grant Holman,G. Holman,Grant Holman,G. Holman,Athletics,680880
@@ -255,7 +255,7 @@ Kevin Gausman,K. Gausman,Kevin Gausman,K. Gausman,Blue Jays,592332
 Mason Fluharty,M. Fluharty,Mason Fluharty,M. Fluharty,Blue Jays,689254
 Myles Straw,M. Straw,Myles Straw,M. Straw,Blue Jays,664702
 Nathan Lukes,N. Lukes,Nathan Lukes,N. Lukes,Blue Jays,664770
-Paxton Schultz,P. Schultz,Paxton Schultz,P. Schultz,Blue Jays,687606
+Spencer Turnbull,S. Turnbull,Spencer Turnbull,S. Turnbull,Blue Jays,605513
 Tyler Heineman,T. Heineman,Tyler Heineman,T. Heineman,Blue Jays,623168
 Vladimir Guerrero,V. Guerrero,Vladimir Guerrero,V. Guerrero,Blue Jays,665489
 Yariel Rodríguez,Y. Rodríguez,Yariel Rodriguez,Y. Rodriguez,Blue Jays,684320
@@ -267,7 +267,6 @@ Hunter Strickland,H. Strickland,Hunter Strickland,H. Strickland,Angels,519326
 Jack Kochanowicz,J. Kochanowicz,Jack Kochanowicz,J. Kochanowicz,Angels,686799
 Jo Adell,J. Adell,Jo Adell,J. Adell,Angels,666176
 Jorge Soler,J. Soler,Jorge Soler,J. Soler,Angels,624585
-José Fermin,J. Fermin,Jose Fermin,J. Fermin,Angels,820862
 José Soriano,J. Soriano,Jose Soriano,J. Soriano,Angels,667755
 Kenley Jansen,K. Jansen,Kenley Jansen,K. Jansen,Angels,445276
 Kevin Newman,K. Newman,Kevin Newman,K. Newman,Angels,621028
@@ -280,6 +279,7 @@ Nolan Schanuel,N. Schanuel,Nolan Schanuel,N. Schanuel,Angels,694384
 Reid Detmers,R. Detmers,Reid Detmers,R. Detmers,Angels,672282
 Ryan Zeferjahn,R. Zeferjahn,Ryan Zeferjahn,R. Zeferjahn,Angels,666171
 Scott Kingery,S. Kingery,Scott Kingery,S. Kingery,Angels,664068
+Shaun Anderson,S. Anderson,Shaun Anderson,S. Anderson,Angels,641312
 Taylor Ward,T. Ward,Taylor Ward,T. Ward,Angels,621493
 Travis d'Arnaud,T. d'Arnaud,Travis d'Arnaud,T. d'Arnaud,Angels,518595
 Tyler Anderson,T. Anderson,Tyler Anderson,T. Anderson,Angels,542881
@@ -297,10 +297,11 @@ Gabriel Arias,G. Arias,Gabriel Arias,G. Arias,Guardians,672356
 Gavin Williams,G. Williams,Gavin Williams,G. Williams,Guardians,668909
 Hunter Gaddis,H. Gaddis,Hunter Gaddis,H. Gaddis,Guardians,683769
 Jakob Junis,J. Junis,Jakob Junis,J. Junis,Guardians,596001
-Jhonkensy Noel,J. Noel,Jhonkensy Noel,J. Noel,Guardians,678877
+Johnathan Rodríguez,J. Rodríguez,Johnathan Rodriguez,J. Rodriguez,Guardians,671286
 José Ramírez,J. Ramírez,Jose Ramirez,J. Ramirez,Guardians,542432
 Kolby Allard,K. Allard,Kolby Allard,K. Allard,Guardians,663465
 Kyle Manzardo,K. Manzardo,Kyle Manzardo,K. Manzardo,Guardians,700932
+Lane Thomas,L. Thomas,Lane Thomas,L. Thomas,Guardians,657041
 Logan Allen,L. Allen,Logan Allen,L. Allen,Guardians,671106
 Luis L. Ortiz,L. L. Ortiz,Luis L. Ortiz,L. L. Ortiz,Guardians,656814
 Matt Festa,M. Festa,Matt Festa,M. Festa,Guardians,670036
@@ -310,7 +311,6 @@ Slade Cecconi,S. Cecconi,Slade Cecconi,S. Cecconi,Guardians,677944
 Steven Kwan,S. Kwan,Steven Kwan,S. Kwan,Guardians,680757
 Tanner Bibee,T. Bibee,Tanner Bibee,T. Bibee,Guardians,676440
 Tim Herrin,T. Herrin,Tim Herrin,T. Herrin,Guardians,682120
-Will Wilson,W. Wilson,Will Wilson,W. Wilson,Guardians,669717
 Antonio Senzatela,A. Senzatela,Antonio Senzatela,A. Senzatela,Rockies,622608
 Braxton Fulford,B. Fulford,Braxton Fulford,B. Fulford,Rockies,690924
 Brenton Doyle,B. Doyle,Brenton Doyle,B. Doyle,Rockies,686668
@@ -325,7 +325,6 @@ Juan Mejia,J. Mejia,Juan Mejia,J. Mejia,Rockies,675848
 Keston Hiura,K. Hiura,Keston Hiura,K. Hiura,Rockies,669374
 Kyle Farmer,K. Farmer,Kyle Farmer,K. Farmer,Rockies,571657
 Kyle Freeland,K. Freeland,Kyle Freeland,K. Freeland,Rockies,607536
-Mickey Moniak,M. Moniak,Mickey Moniak,M. Moniak,Rockies,666160
 Orlando Arcia,O. Arcia,Orlando Arcia,O. Arcia,Rockies,606115
 Ryan McMahon,R. McMahon,Ryan McMahon,R. McMahon,Rockies,641857
 Ryan Ritter,R. Ritter,Ryan Ritter,R. Ritter,Rockies,121240
@@ -338,7 +337,6 @@ Tyler Kinley,T. Kinley,Tyler Kinley,T. Kinley,Rockies,641755
 Victor Vodnik,V. Vodnik,Victor Vodnik,V. Vodnik,Rockies,680767
 Zach Agnos,Z. Agnos,Zach Agnos,Z. Agnos,Rockies,688642
 Brandon Nimmo,B. Nimmo,Brandon Nimmo,B. Nimmo,Mets,607043
-Brandon Waddell,B. Waddell,Brandon Waddell,B. Waddell,Mets,663399
 Brett Baty,B. Baty,Brett Baty,B. Baty,Mets,683146
 Clay Holmes,C. Holmes,Clay Holmes,C. Holmes,Mets,605280
 David Peterson,D. Peterson,David Peterson,D. Peterson,Mets,656849
@@ -352,6 +350,7 @@ Jeff McNeil,J. McNeil,Jeff McNeil,J. McNeil,Mets,643446
 José Buttó,J. Buttó,Jose Butto,J. Butto,Mets,676130
 José Castillo,J. Castillo,Jose Castillo,J. Castillo,Mets,620454
 Juan Soto,J. Soto,Juan Soto,J. Soto,Mets,665742
+Justin Garza,J. Garza,Justin Garza,J. Garza,Mets,621057
 Kodai Senga,K. Senga,Kodai Senga,K. Senga,Mets,673540
 Luis Torrens,L. Torrens,Luis Torrens,L. Torrens,Mets,620443
 Luisangel Acuña,L. Acuña,Luisangel Acuna,L. Acuna,Mets,819445
@@ -399,7 +398,7 @@ Connor Norby,C. Norby,Connor Norby,C. Norby,Marlins,681393
 Dane Myers,D. Myers,Dane Myers,D. Myers,Marlins,667472
 Edward Cabrera,E. Cabrera,Edward Cabrera,E. Cabrera,Marlins,665795
 Eric Wagaman,E. Wagaman,Eric Wagaman,E. Wagaman,Marlins,676572
-George Soriano,G. Soriano,George Soriano,G. Soriano,Marlins,666277
+Eury Pérez,E. Pérez,Eury Perez,E. Perez,Marlins,691587
 Heriberto Hernandez,H. Hernandez,Heriberto Hernandez,H. Hernandez,Marlins,681715
 Jack Winkler,J. Winkler,Jack Winkler,J. Winkler,Marlins,676466
 Janson Junk,J. Junk,Janson Junk,J. Junk,Marlins,676083
@@ -410,7 +409,6 @@ Liam Hicks,L. Hicks,Liam Hicks,L. Hicks,Marlins,689414
 Nick Fortes,N. Fortes,Nick Fortes,N. Fortes,Marlins,663743
 Otto Lopez,O. Lopez,Otto Lopez,O. Lopez,Marlins,672640
 Ronny Henriquez,R. Henriquez,Ronny Henriquez,R. Henriquez,Marlins,678692
-Ryan Weathers,R. Weathers,Ryan Weathers,R. Weathers,Marlins,677960
 Sandy Alcantara,S. Alcantara,Sandy Alcantara,S. Alcantara,Marlins,645261
 Tyler Phillips,T. Phillips,Tyler Phillips,T. Phillips,Marlins,663969
 Valente Bellozo,V. Bellozo,Valente Bellozo,V. Bellozo,Marlins,678368
@@ -451,7 +449,6 @@ Freddy Fermin,F. Fermin,Freddy Fermin,F. Fermin,Royals,666023
 Jac Caglianone,J. Caglianone,Jac Caglianone,J. Caglianone,Royals,114853
 John Rave,J. Rave,John Rave,J. Rave,Royals,670231
 John Schreiber,J. Schreiber,John Schreiber,J. Schreiber,Royals,670167
-Jonathan Bowlan,J. Bowlan,Jonathan Bowlan,J. Bowlan,Royals,680742
 Jonathan India,J. India,Jonathan India,J. India,Royals,663697
 Kris Bubic,K. Bubic,Kris Bubic,K. Bubic,Royals,663460
 Kyle Isbel,K. Isbel,Kyle Isbel,K. Isbel,Royals,664728
@@ -466,16 +463,17 @@ Salvador Perez,S. Perez,Salvador Perez,S. Perez,Royals,521692
 Seth Lugo,S. Lugo,Seth Lugo,S. Lugo,Royals,607625
 Steven Cruz,S. Cruz,Steven Cruz,S. Cruz,Royals,674444
 Taylor Clarke,T. Clarke,Taylor Clarke,T. Clarke,Royals,664199
+Trevor Richards,T. Richards,Trevor Richards,T. Richards,Royals,670950
 Vinnie Pasquantino,V. Pasquantino,Vinnie Pasquantino,V. Pasquantino,Royals,686469
 Brandon Lowe,B. Lowe,Brandon Lowe,B. Lowe,Rays,664040
 Christopher Morel,C. Morel,Christopher Morel,C. Morel,Rays,666624
-Cole Sulser,C. Sulser,Cole Sulser,C. Sulser,Rays,642121
 Curtis Mead,C. Mead,Curtis Mead,C. Mead,Rays,678554
 Danny Jansen,D. Jansen,Danny Jansen,D. Jansen,Rays,643376
 Drew Rasmussen,D. Rasmussen,Drew Rasmussen,D. Rasmussen,Rays,656876
 Edwin Uceta,E. Uceta,Edwin Uceta,E. Uceta,Rays,670955
 Eric Orze,E. Orze,Eric Orze,E. Orze,Rays,679358
 Garrett Cleavinger,G. Cleavinger,Garrett Cleavinger,G. Cleavinger,Rays,664076
+Ian Seymour,I. Seymour,Ian Seymour,I. Seymour,Rays,122033
 Jake Mangum,J. Mangum,Jake Mangum,J. Mangum,Rays,663968
 Jonathan Aranda,J. Aranda,Jonathan Aranda,J. Aranda,Rays,666018
 José Caballero,J. Caballero,Jose Caballero,J. Caballero,Rays,676609
@@ -494,6 +492,7 @@ Taylor Walls,T. Walls,Taylor Walls,T. Walls,Rays,670764
 Yandy Díaz,Y. Díaz,Yandy Diaz,Y. Diaz,Rays,650490
 Zack Littell,Z. Littell,Zack Littell,Z. Littell,Rays,641793
 Bennett Sousa,B. Sousa,Bennett Sousa,B. Sousa,Astros,656986
+Brandon Walter,B. Walter,Brandon Walter,B. Walter,Astros,687888
 Brendan Rodgers,B. Rodgers,Brendan Rodgers,B. Rodgers,Astros,663898
 Bryan Abreu,B. Abreu,Bryan Abreu,B. Abreu,Astros,650556
 Bryan King,B. King,Bryan King,B. King,Astros,687911
@@ -501,7 +500,6 @@ Cam Smith,C. Smith,Cam Smith,C. Smith,Astros,701358
 César Salazar,C. Salazar,Cesar Salazar,C. Salazar,Astros,663967
 Christian Walker,C. Walker,Christian Walker,C. Walker,Astros,572233
 Colton Gordon,C. Gordon,Colton Gordon,C. Gordon,Astros,676467
-Forrest Whitley,F. Whitley,Forrest Whitley,F. Whitley,Astros,666215
 Framber Valdez,F. Valdez,Framber Valdez,F. Valdez,Astros,664285
 Hunter Brown,H. Brown,Hunter Brown,H. Brown,Astros,686613
 Isaac Paredes,I. Paredes,Isaac Paredes,I. Paredes,Astros,670623
@@ -579,6 +577,7 @@ Carlos Correa,C. Correa,Carlos Correa,C. Correa,Twins,621043
 Chris Paddack,C. Paddack,Chris Paddack,C. Paddack,Twins,663978
 Christian Vázquez,C. Vázquez,Christian Vazquez,C. Vazquez,Twins,543877
 Cole Sands,C. Sands,Cole Sands,C. Sands,Twins,663485
+Danny Coulombe,D. Coulombe,Danny Coulombe,D. Coulombe,Twins,543056
 David Festa,D. Festa,David Festa,D. Festa,Twins,701581
 Griffin Jax,G. Jax,Griffin Jax,G. Jax,Twins,643377
 Harrison Bader,H. Bader,Harrison Bader,H. Bader,Twins,664056
@@ -592,20 +591,18 @@ Louis Varland,L. Varland,Louis Varland,L. Varland,Twins,686973
 Matt Wallner,M. Wallner,Matt Wallner,M. Wallner,Twins,670242
 Royce Lewis,R. Lewis,Royce Lewis,R. Lewis,Twins,668904
 Ryan Jeffers,R. Jeffers,Ryan Jeffers,R. Jeffers,Twins,680777
-Travis Adams,T. Adams,Travis Adams,T. Adams,Twins,458691
 Trevor Larnach,T. Larnach,Trevor Larnach,T. Larnach,Twins,663616
 Ty France,T. France,Ty France,T. France,Twins,664034
 Willi Castro,W. Castro,Willi Castro,W. Castro,Twins,650489
-Zebby Matthews,Z. Matthews,Zebby Matthews,Z. Matthews,Twins,805673
 Andrés Muñoz,A. Muñoz,Andres Munoz,A. Munoz,Mariners,662253
 Ben Williamson,B. Williamson,Ben Williamson,B. Williamson,Mariners,810938
 Bryan Woo,B. Woo,Bryan Woo,B. Woo,Mariners,693433
 Bryce Miller,B. Miller,Bryce Miller,B. Miller,Mariners,682243
 Cal Raleigh,C. Raleigh,Cal Raleigh,C. Raleigh,Mariners,663728
 Carlos Vargas,C. Vargas,Carlos Vargas,C. Vargas,Mariners,672841
-Casey Lawrence,C. Lawrence,Casey Lawrence,C. Lawrence,Mariners,596271
 Casey Legumina,C. Legumina,Casey Legumina,C. Legumina,Mariners,668984
 Cole Young,C. Young,Cole Young,C. Young,Mariners,702284
+Dominic Canzone,D. Canzone,Dominic Canzone,D. Canzone,Mariners,686527
 Donovan Solano,D. Solano,Donovan Solano,D. Solano,Mariners,456781
 Dylan Moore,D. Moore,Dylan Moore,D. Moore,Mariners,664238
 Eduard Bazardo,E. Bazardo,Eduard Bazardo,E. Bazardo,Mariners,660825
@@ -616,13 +613,13 @@ J.P. Crawford,J. Crawford,J.P. Crawford,J. Crawford,Mariners,641487
 Jackson Kowar,J. Kowar,Jackson Kowar,J. Kowar,Mariners,663804
 Jorge Polanco,J. Polanco,Jorge Polanco,J. Polanco,Mariners,593871
 Julio Rodríguez,J. Rodríguez,Julio Rodriguez,J. Rodriguez,Mariners,677594
-Leody Taveras,L. Taveras,Leody Taveras,L. Taveras,Mariners,665750
 Luis Castillo,L. Castillo,Luis Castillo,L. Castillo,Mariners,112116
 Matt Brash,M. Brash,Matt Brash,M. Brash,Mariners,666374
 Miles Mastrobuoni,M. Mastrobuoni,Miles Mastrobuoni,M. Mastrobuoni,Mariners,670156
 Mitch Garver,M. Garver,Mitch Garver,M. Garver,Mariners,641598
 Randy Arozarena,R. Arozarena,Randy Arozarena,R. Arozarena,Mariners,668227
 Rowdy Tellez,R. Tellez,Rowdy Tellez,R. Tellez,Mariners,642133
+Trent Thornton,T. Thornton,Trent Thornton,T. Thornton,Mariners,663423
 Alex Call,A. Call,Alex Call,A. Call,Nationals,669743
 Amed Rosario,A. Rosario,Amed Rosario,A. Rosario,Nationals,642708
 Andrew Chafin,A. Chafin,Andrew Chafin,A. Chafin,Nationals,605177
@@ -651,8 +648,8 @@ Trevor Williams,T. Williams,Trevor Williams,T. Williams,Nationals,592866
 Zach Brzykcy,Z. Brzykcy,Zach Brzykcy,Z. Brzykcy,Nationals,694350
 Alek Thomas,A. Thomas,Alek Thomas,A. Thomas,D-backs,677950
 Brandon Pfaadt,B. Pfaadt,Brandon Pfaadt,B. Pfaadt,D-backs,694297
+Christian Montes De Oca,C. Montes De Oca,Christian Montes De Oca,C. Montes De Oca,D-backs,656755
 Corbin Carroll,C. Carroll,Corbin Carroll,C. Carroll,D-backs,682998
-Cristian Mena,C. Mena,Cristian Mena,C. Mena,D-backs,691441
 Eduardo Rodriguez,E. Rodriguez,Eduardo Rodriguez,E. Rodriguez,D-backs,593958
 Eugenio Suárez,E. Suárez,Eugenio Suarez,E. Suarez,D-backs,553993
 Gabriel Moreno,G. Moreno,Gabriel Moreno,G. Moreno,D-backs,672515
@@ -664,8 +661,8 @@ Jose Herrera,J. Herrera,Jose Herrera,J. Herrera,D-backs,645444
 Josh Naylor,J. Naylor,Josh Naylor,J. Naylor,D-backs,647304
 Juan Morillo,J. Morillo,Juan Morillo,J. Morillo,D-backs,434623
 Justin Martinez,J. Martinez,Justin Martinez,J. Martinez,D-backs,679885
-Kendall Graveman,K. Graveman,Kendall Graveman,K. Graveman,D-backs,608665
 Ketel Marte,K. Marte,Ketel Marte,K. Marte,D-backs,606466
+Kyle Backhus,K. Backhus,Kyle Backhus,K. Backhus,D-backs,452035
 Lourdes Gurriel,L. Gurriel,Lourdes Gurriel,L. Gurriel,D-backs,666971
 Merrill Kelly,M. Kelly,Merrill Kelly,M. Kelly,D-backs,518876
 Pavin Smith,P. Smith,Pavin Smith,P. Smith,D-backs,656976
@@ -681,16 +678,16 @@ Andrew Heaney,A. Heaney,Andrew Heaney,A. Heaney,Pirates,571760
 Andrew McCutchen,A. McCutchen,Andrew McCutchen,A. McCutchen,Pirates,457705
 Bailey Falter,B. Falter,Bailey Falter,B. Falter,Pirates,663559
 Braxton Ashcraft,B. Ashcraft,Braxton Ashcraft,B. Ashcraft,Pirates,677952
+Brett Sullivan,B. Sullivan,Brett Sullivan,B. Sullivan,Pirates,664954
 Bryan Reynolds,B. Reynolds,Bryan Reynolds,B. Reynolds,Pirates,668804
 Caleb Ferguson,C. Ferguson,Caleb Ferguson,C. Ferguson,Pirates,657571
 Chase Shugart,C. Shugart,Chase Shugart,C. Shugart,Pirates,663767
 David Bednar,D. Bednar,David Bednar,D. Bednar,Pirates,670280
 Dennis Santana,D. Santana,Dennis Santana,D. Santana,Pirates,642701
-Endy Rodríguez,E. Rodríguez,Endy Rodriguez,E. Rodriguez,Pirates,682848
 Henry Davis,H. Davis,Henry Davis,H. Davis,Pirates,680779
+Isaac Mattson,I. Mattson,Isaac Mattson,I. Mattson,Pirates,676755
 Isiah Kiner-Falefa,I. Kiner-Falefa,Isiah Kiner-Falefa,I. Kiner-Falefa,Pirates,643396
 Jared Triolo,J. Triolo,Jared Triolo,J. Triolo,Pirates,669707
-Joey Wentz,J. Wentz,Joey Wentz,J. Wentz,Pirates,666214
 Ke'Bryan Hayes,K. Hayes,Ke'Bryan Hayes,K. Hayes,Pirates,663647
 Kyle Nicolas,K. Nicolas,Kyle Nicolas,K. Nicolas,Pirates,693312
 Mike Burrows,M. Burrows,Mike Burrows,M. Burrows,Pirates,681347
@@ -757,7 +754,6 @@ Alex Vesia,A. Vesia,Alex Vesia,A. Vesia,Dodgers,681911
 Andy Pages,A. Pages,Andy Pages,A. Pages,Dodgers,681624
 Anthony Banda,A. Banda,Anthony Banda,A. Banda,Dodgers,607455
 Ben Casparius,B. Casparius,Ben Casparius,B. Casparius,Dodgers,676508
-Chris Stratton,C. Stratton,Chris Stratton,C. Stratton,Dodgers,608717
 Clayton Kershaw,C. Kershaw,Clayton Kershaw,C. Kershaw,Dodgers,477132
 Dalton Rushing,D. Rushing,Dalton Rushing,D. Rushing,Dodgers,687221
 Dustin May,D. May,Dustin May,D. May,Dodgers,669160
@@ -767,15 +763,16 @@ Hyeseong Kim,H. Kim,Hyeseong Kim,H. Kim,Dodgers,808975
 Jack Dreyer,J. Dreyer,Jack Dreyer,J. Dreyer,Dodgers,676263
 José Ureña,J. Ureña,Jose Urena,J. Urena,Dodgers,570632
 Justin Wrobleski,J. Wrobleski,Justin Wrobleski,J. Wrobleski,Dodgers,680736
+Kirby Yates,K. Yates,Kirby Yates,K. Yates,Dodgers,489446
 Lou Trivino,L. Trivino,Lou Trivino,L. Trivino,Dodgers,642152
 Max Muncy,M. Muncy,Max Muncy,M. Muncy,Dodgers,571970
 Michael Conforto,M. Conforto,Michael Conforto,M. Conforto,Dodgers,624424
+Michael Kopech,M. Kopech,Michael Kopech,M. Kopech,Dodgers,656629
 Miguel Rojas,M. Rojas,Miguel Rojas,M. Rojas,Dodgers,500743
 Mookie Betts,M. Betts,Mookie Betts,M. Betts,Dodgers,605141
 Shohei Ohtani,S. Ohtani,Shohei Ohtani,S. Ohtani,Dodgers,660271
 Tanner Scott,T. Scott,Tanner Scott,T. Scott,Dodgers,656945
 Teoscar Hernández,T. Hernández,Teoscar Hernandez,T. Hernandez,Dodgers,606192
 Tommy Edman,T. Edman,Tommy Edman,T. Edman,Dodgers,669242
-Tony Gonsolin,T. Gonsolin,Tony Gonsolin,T. Gonsolin,Dodgers,664062
 Will Smith,W. Smith,Will Smith,W. Smith,Dodgers,519293
 Yoshinobu Yamamoto,Y. Yamamoto,Yoshinobu Yamamoto,Y. Yamamoto,Dodgers,808967
