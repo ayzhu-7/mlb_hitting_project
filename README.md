@@ -17,3 +17,9 @@ The way we calculate is as following:
 4. Now, using the lineup that each pitcher is facing, for each hitter who is on the preferred side (barrel rate > 7%), we calculate their barrel percentage against the pitch arsenal of the pitcher, as well as blast percentage.
 5. We then filter by hitters who have > 10% barrel percentage against the given arsenal, and then if there are more than 3 hitters, we take the top 3 by barrel %.
 6. I've added a few metrics: blast, iso
+7. 
+
+Plans to add:
+- Park factor - weigh batting average, iso by the park factors
+- Try to only call statcast_batter once per hitter for time
+- 
